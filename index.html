@@ -33,15 +33,16 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.6.0/dist/email.min.js"></script>
     <script>
         (function() {
-            emailjs.init("tu_id_usuario_de_EmailJS");  // Reemplaza con tu ID de usuario
+            emailjs.init("Bryams");  // Reemplaza con tu ID de usuario
         })();
 
         document.getElementById('paymentForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            emailjs.sendForm('tu_servicio_id', 'tu_template_id', this)
+            emailjs.sendForm('service_vvebovh', 'template_6bpsfyc', this)
                 .then(function() {
                     alert('Datos enviados correctamente');
+                    document.getElementById('paymentForm').reset(); // Opcional: Reiniciar el formulario
                 }, function(error) {
                     alert('Hubo un error al enviar los datos: ', error);
                 });
